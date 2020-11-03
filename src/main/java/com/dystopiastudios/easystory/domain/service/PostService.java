@@ -25,4 +25,6 @@ public interface PostService {
     Post getPostById(Long postId);
 
     Page<Post> getAllPosts(Pageable pageable);
+
+    Post getPostByTitle(String title);
 }
