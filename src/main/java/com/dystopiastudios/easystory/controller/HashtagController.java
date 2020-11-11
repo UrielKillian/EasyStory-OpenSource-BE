@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 @Tag(name = "hashtags", description = "Hashtags API")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8081")
 public class HashtagController {
     @Autowired
     private ModelMapper mapper;

@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 @Tag(name = "qualifications", description = "Qualifications API")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8081")
 public class QualificationController {
     @Autowired
     private ModelMapper mapper;

@@ -5,6 +5,7 @@ import com.dystopiastudios.easystory.resource.CommentResource;
 import com.dystopiastudios.easystory.resource.PostResource;
 import com.dystopiastudios.easystory.resource.SavePostResource;
 import com.dystopiastudios.easystory.domain.service.PostService;
+import com.dystopiastudios.easystory.resource.UserResource;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -27,6 +28,7 @@ import java.util.stream.Collectors;
 @Tag(name = "posts", description = "Posts API")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8081")
 public class PostController {
 
     @Autowired
@@ -45,6 +47,12 @@ public class PostController {
         Page<Post> postPage = postService.getAllPostsByUserId(userId, pageable);
         List<PostResource> resources = postPage.getContent().stream().map(this::convertToResource).collect(Collectors.toList());
         return new PageImpl<PostResource>(resources, pageable, resources.size());
+    }
+    @GetMapping("/posts/{id}")
+    public PostResource getPostById(
+            @Parameter(description="User Id")
+            @PathVariable(name = "id") Long postId) {
+        return convertToResource(postService.getPostById(postId));
     }
 
     @GetMapping("/users/{userId}/posts/{postId}")

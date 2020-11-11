@@ -26,6 +26,7 @@ import java.util.stream.Collectors;
 @Tag(name = "subscriptions", description = "Subscriptions desc")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8081")
 public class SubscriptionController {
 
     @Autowired

@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 @Tag(name = "comments", description = "Comments desc")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8081")
 public class CommentController {
     @Autowired
     private ModelMapper mapper;

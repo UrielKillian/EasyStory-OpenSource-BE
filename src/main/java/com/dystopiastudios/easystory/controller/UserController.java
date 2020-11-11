@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
 @Tag(name = "users", description = "Users API")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8081")
 public class UserController {
     @Autowired
     private ModelMapper mapper;

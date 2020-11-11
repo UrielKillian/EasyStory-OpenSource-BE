@@ -25,6 +25,7 @@ import java.util.stream.Collectors;
 @Tag(name = "bookmarks", description = "Bookmarks desc")
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8081")
 public class BookmarkController {
 
     @Autowired
