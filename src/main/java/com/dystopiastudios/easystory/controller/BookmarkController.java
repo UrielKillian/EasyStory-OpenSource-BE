@@ -2,6 +2,7 @@ package com.dystopiastudios.easystory.controller;
 
 import com.dystopiastudios.easystory.domain.model.Bookmark;
 import com.dystopiastudios.easystory.domain.model.Hashtag;
+import com.dystopiastudios.easystory.exception.ResourceNotFoundException;
 import com.dystopiastudios.easystory.resource.BookmarkResource;
 import com.dystopiastudios.easystory.resource.HashtagResource;
 import com.dystopiastudios.easystory.resource.SaveBookmarkResource;

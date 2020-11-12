@@ -16,9 +16,9 @@ public class PostCreationSteps extends SpringIntegrationTest {
 
     @Given("i am a user and entered the correct data")
     public void i_am_a_user_and_entered_the_correct_data() {
-        postResource.setTitle("NOREPETIDO");
-        postResource.setDescription("NuevaPublication");
-        postResource.setContent("terrorsito");
+        postResource.setTitle("Opaque");
+        postResource.setDescription("Dimensioon");
+        postResource.setContent("comidas");
     }
 
     @Given("i am a user and entered the incorrect data")

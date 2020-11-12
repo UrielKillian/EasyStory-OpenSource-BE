@@ -1,6 +1,7 @@
 package com.dystopiastudios.easystory.domain.service;
 
 import com.dystopiastudios.easystory.domain.model.Comment;
+import com.dystopiastudios.easystory.domain.model.Qualification;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -17,4 +18,6 @@ public interface CommentService {
     Comment updateComment(Long commentId, Comment commentDetails);
 
     ResponseEntity<?> deleteComment(Long commentId);
+
+    Comment getCommentByUserIdAndPostId(Long userId, Long postId);
 }

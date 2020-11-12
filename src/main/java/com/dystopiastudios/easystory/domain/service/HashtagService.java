@@ -1,6 +1,7 @@
 package com.dystopiastudios.easystory.domain.service;
 
 import com.dystopiastudios.easystory.domain.model.Hashtag;
+import com.dystopiastudios.easystory.domain.model.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -17,4 +18,6 @@ public interface HashtagService {
     Hashtag updateHashtag(Long HashtagId, Hashtag tagDetails);
 
     ResponseEntity<?> deleteHashtag(Long HashtagId);
+
+    Hashtag getHashtagByName(String name);
 }

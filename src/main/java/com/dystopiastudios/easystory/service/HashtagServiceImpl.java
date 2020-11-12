@@ -1,5 +1,6 @@
 package com.dystopiastudios.easystory.service;
 
+import com.dystopiastudios.easystory.domain.model.User;
 import com.dystopiastudios.easystory.domain.service.HashtagService;
 import com.dystopiastudios.easystory.exception.ResourceNotFoundException;
 import com.dystopiastudios.easystory.domain.model.Hashtag;
@@ -64,6 +65,13 @@ public class HashtagServiceImpl implements HashtagService {
             hashtagRepository.delete(hashtag);
             return ResponseEntity.ok().build();
         }).orElseThrow(() -> new ResourceNotFoundException("Hashtag", "Id", hashtagId));
+
+    }
+
+    @Override
+    public Hashtag getHashtagByName(String name){
+        return hashtagRepository.findByName(name)
+                .orElseThrow(() -> new ResourceNotFoundException("Hashtag", "Name", name));
 
     }
 }
