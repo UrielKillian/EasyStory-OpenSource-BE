@@ -1,7 +1,7 @@
 package com.dystopiastudios.easystory.cucumber.StepDefinitions;
 
 import com.dystopiastudios.easystory.cucumber.SpringIntegrationTest;
-import com.dystopiastudios.easystory.cucumber.resource.SaveUserResource;
+import com.dystopiastudios.easystory.resource.SaveUserResource;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

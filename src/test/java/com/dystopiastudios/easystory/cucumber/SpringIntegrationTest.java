@@ -1,5 +1,6 @@
 package com.dystopiastudios.easystory.cucumber;
 
+import com.dystopiastudios.easystory.EasystoryApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.client.ClientHttpResponse;
-import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
