@@ -13,8 +13,7 @@ public class EasystoryApplication {
     public static void main(String[] args) {
         SpringApplication.run(EasystoryApplication.class, args);
     }
-
     @Bean
-    public ModelMapper modelMapper() {return new ModelMapper();}
+    public ModelMapper modelMapper() { return new ModelMapper(); }
 
 }
