@@ -28,7 +28,7 @@ import static org.hamcrest.Matchers.is;
 @CucumberContextConfiguration
 @SpringBootTest(classes = EasystoryApplication.class, webEnvironment = WebEnvironment.DEFINED_PORT)
 public class SpringIntegrationTest {
-    static ResponseResults latestResponse = null;
+
     public static HttpStatus response;
 
     @Autowired
@@ -36,25 +36,7 @@ public class SpringIntegrationTest {
 
     private final String BASE_URL = "http://localhost:8080";
 
-    private static class ResponseResultErrorHandler implements ResponseErrorHandler {
-        private ResponseResults results = null;
-        private Boolean hadError = false;
 
-        private ResponseResults getResults() {
-            return results;
-        }
-
-        @Override
-        public boolean hasError(ClientHttpResponse response) throws IOException {
-            hadError = response.getRawStatusCode() >= 400;
-            return hadError;
-        }
-
-        @Override
-        public void handleError(ClientHttpResponse response) throws IOException {
-            results = new ResponseResults(response);
-        }
-    }
 
     //POST METHOD
     public void executePost(String url, Object body) throws IOException {
